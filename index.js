@@ -9,7 +9,7 @@ server.listen(3000);
 
 // Отслеживание url адреса и отображение нужной HTML страницы
 app.get('/', function(request, respons) {
-  respons.sendFile(__dirname + '/index.html');
+  respons.sendFile(__dirname + '/indexMain.html');
 });
 
 // Массив со всеми подключениями
@@ -39,5 +39,5 @@ io.sockets.on('connection', function(socket) {
 });
 
 app.get('/about', function(request, respons) {
-  respons.sendFile(__dirname + '/about.html');
+  respons.sendFile(__dirname + '/aboutMe.html');
 });
